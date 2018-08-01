@@ -1,0 +1,62 @@
+\documentclass[11pt,letterpaper,roman]{moderncv}
+
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.75]{geometry}
+\usepackage[disable]{todonotes}
+\usepackage{lastpage}
+
+\moderncvstyle{classic}
+\moderncvcolor{black}
+
+\pagenumbering{arabic}
+\rfoot{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+
+\newcommand{\tabbed}{\setlength{\itemindent}{1em}}
+
+\name{Hunter}{Damron}
+\title{Curriculum Vit\ae}
+\address{4569 Edgeland Road}{Edgemoor, SC}{}
+\phone[mobile]{+1~(803)~448~4411}
+\email{hdamron@email.sc.edu}
+%\homepage{cse.sc.edu/~hdamron}
+\social[github]{github.com/hdamron17}
+\extrainfo{Citizen of U.S.A.}
+
+\begin{document}
+\makecvtitle{}
+
+\todo[inline]{TODO\@: \\
+	Check names and improve wording for all awards in education section
+}
+
+\section{Education}
+\cventry{2017--present}{BS, Computer Engineering and Mathematics Double Major}{University of South Carolina Honors College}{Columbia, SC}{}{}
+\cvitem{\small Current GPA:}{4.0/4.0}
+\cvitem{\small Honors:}{\begin{itemize}
+		\item Carolina Scholarship -- Awarded by the University of South Carolina to 20 students for academic and extracurricular leadership and excellence in high school.
+		\item ICPC College of Charleston Competition Division I Third Place -- Computer science problem solving competition in teams of three.
+		\item President's List Fall 2017 -- Awarded for average 4.00 GPA earned on a semester of at least 12 credit hours.
+	\end{itemize}}
+\cventry{2015--2017}{High School Diploma}{SC Governor's School for Science and Mathematics}{Hartsville, SC}{}{}
+\cvitem{\small GPA:}{4.0/4.0}
+\cvitem{\small Honors:}{\begin{itemize}
+		\item University of Rochester Bausch and Lomb Honorary Science Award -- Awarded for excellence in rigorous science courseload.
+		\item Senior Computer Science Award -- Awarded to one student in senior class for excellence in computer science.
+		\item Research Experience Scholars Program -- Artificial Intelligence Research in Kaiserslautern, Germany. %NOLINT
+	\end{itemize}}
+
+\section{Experience}
+\cventry{2017--present}{Unpaid Research Intern under Ioannis Rekleitis}{Autonomous Field Robotics Laboratory, USC}{Columbia, SC}{}{Internship conducting research dealing with the cooperative localization of underwater robots using computer vision. \\ Work being prepared for iROS 2018 conference.}
+
+\cventry{Summer 2016}{Research Intern under Marco Hirsch}{German Research Center for Artificial Intelligence (DKFI)}{Kaiserslautern, Germany}{}{Internship developing a non-linear method of administering questionnaires for improved efficiency. \\ Wrote unpublished paper: ``Structured Representation for Dynamic Survey Logic''}
+
+\cventry{2016--2017}{Cofounder, Software Developer}{Calendry Technologies}{Hartsville, SC}{}{Helped start Calendry Technologies and its GoHartsville Project to consolidate information about community events from multiple sources into one calendar using an automated system.}
+
+\section{Relevant Coursework}
+\subsection{\textbf{University of South Carolina}\dotfill}
+\cvitem{Computer Science}{Digital Systems, Linux, Bash Scripting, (In Progress: Software Engineering, Computer Architecture, Assembly Language)}
+\cvitem{Mathematics}{Vector Calculus, Transition to Advanced Mathematics, (In Progress: Linear Algebra, Discrete Mathematics)}
+\subsection{\textbf{SC Governor's School for Science and Mathematics}\dotfill}
+\cvitem{Computer Science}{Linux, C/C++, Java, Python, ROS, Computer Vision, Localization/Mapping, Machine Learning, Game Design}
+\cvitem{Mathematics}{Abstract Algebra, Single Variable Calculus, Numerical Integration}
+\end{document}
