@@ -1,10 +1,14 @@
 \documentclass[10pt,letterpaper,roman]{moderncv}
 
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.50in]{geometry}
+\usepackage[margin=0.9in]{geometry}
 \usepackage{todonotes}
 \usepackage[backend=bibtex,style=ieee]{biblatex}
 \usepackage{bibentry}
+\usepackage{multicol}
+\usepackage{xspace}
+\usepackage{enumitem}
+\setlist{nolistsep, noitemsep, nosep, topsep=0pt}
 
 \bibliography{Publications}
 %\bibliographystyle{plain}
@@ -12,9 +16,15 @@
 \moderncvstyle{banking}
 \moderncvcolor{black}
 
+\renewcommand{\cvitem}[2]{\item {#1}\hfill\textit{#2}}
+
 \renewcommand*{\namefont}{\fontsize{18}{20}\bfseries\upshape}
 \renewcommand*{\sectionfont}{\fontsize{11}{12}\bfseries\upshape}
 \renewcommand*{\subsectionfont}{\fontsize{10}{11}\bfseries\upshape}
+
+\newcommand{\st}{\textsuperscript{st}\xspace}
+\newcommand{\nd}{\textsuperscript{nd}\xspace}
+\newcommand{\rd}{\textsuperscript{rd}\xspace}
 
 \name{Hunter}{Damron}
 \address{4569 Edgeland Road}{Edgemoor, SC}{}
@@ -29,19 +39,19 @@
 \section{Education}
 \cventry{May 2021}{BS, Computer Science and Mathematics Double Major}{University of South Carolina Honors College}{Columbia, SC}{GPA: 4.0/4.0}{}
 
-\cventry{May 2017}{High School Diploma}{SC Governor's School for Science and Mathematics}{Hartsville, SC}{GPA: 4.0/4.0}{}
+%\cventry{May 2017}{High School Diploma}{SC Governor's School for Science and Mathematics}{Hartsville, SC}{GPA: 4.0/4.0}{}
 
 \section{Experience}
 \cventry{November 2017--present}{Research Intern under Ioannis Rekleitis}{Autonomous Field Robotics Laboratory, USC}{Columbia, SC}{}{
 \begin{itemize}
   \item Conduct research dealing with the cooperative localization of underwater robots using computer vision.
-  \item Work submitted for IROS 2018 conference~\cite{uwcl}.
+  \item Work presented at IROS 2018 in Madrid, Spain.~\cite{uwcl}.
 \end{itemize}}
 
 \cventry{June 2016--July 2016}{Research Intern under Marco Hirsch}{German Research Center for Artificial Intelligence (DKFI)}{Kaiserslautern, Germany}{}{
 \begin{itemize}
   \item Developed a non-linear method of administering questionnaires for improved efficiency.
-  \item Wrote unpublished paper: ``Structured Representation for Dynamic Survey Logic''
+%  \item Wrote unpublished paper: ``Structured Representation for Dynamic Survey Logic''
 \end{itemize}}
 
 \cventry{November 2016--May 2017}{Cofounder and Software Developer}{Calendry Technologies}{Hartsville, SC}{}{
@@ -49,51 +59,67 @@
   \item Helped start Calendry Technologies and its GoHartsville Project to consolidate information about community events from multiple sources into one calendar using an automated system.
 \end{itemize}}
 
-\cventry{August 2016--May 2017}{Unpaid Physics and Computer Science Tutor}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{}{
+\cventry{August 2016--May 2017}{Volunteer Unpaid Physics and Computer Science Tutor}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{}{
 	\begin{itemize}
 		\item Assisted peers with physics and computer science coursework during several scheduled hours each week and by request.
 \end{itemize}}
 
-\section{Honors and Activities}
-\subsection{\textbf{Honors and Awards}}
+\section{\textbf{Honors and Awards}}
 \begin{itemize}
-  \item Carolina Four-year Academic Scholarship \hfill \textit{August 2017--May 2021}
-  \item President's List Fall 2017, Spring 2018 \hfill \textit{May 2018}
-
-  \item Senior Computer Science Award \hfill \textit{May 2017}
-  \item University of Rochester Bausch and Lomb Honorary Science Award \hfill \textit{May 2016}
-  \item Research Experience Scholars Program \hfill \textit{April 2016}
-  \item Eagle Scout Rank \hfill \textit{November 2016}
+  \cvitem{Carolina Scholar Award}{August 2017}
+%  \cvitem{President's List All Semesters}{December 2017--May 2018}
+  \cvitem{ACM ICPC Division I College of Charleston 3\rd Place 2017, 2\nd Place 2018}{November 2017 and 2018}
+  \cvitem{ACM Code-A-Thon Highest Division Second Place}{October 2018}
+%  \cvitem{Senior Computer Science Award}{May 2017}
+%  \cvitem{University of Rochester Bausch and Lomb Honorary Science Award}{May 2016}
+%  \cvitem{Research Experience Scholars Program}{April 2016}
+  \cvitem{Eagle Scout Rank}{November 2016}
 \end{itemize}
 
-\subsection{\textbf{Organizations and Leadership}}
+\section{\textbf{Organizations}}
 \begin{itemize}
-  \item IEEE -- Institute of Electrical and Electronics Engineers \hfill \textit{July 2018--present}
-  \item ACM -- Association of Computing Machinery \hfill \textit{November 2017--present}
-  \begin{itemize}
-    \item ICPC Division I College of Charleston Competition Third Place, November 2017
-  \end{itemize}
-  \item Gamecock Sailing Team \hfill \textit{January 2018--present}
-%   \item Carolina Ballroom Club \hfill \textit{September 2018--present}
+  \cvitem{Association of Computing Machinery}{November 2017--present}
+  \cvitem{Institute of Electrical and Electronics Engineers}{July 2018--present}
+  \cvitem{Pi Mu Epsilon Mathematics Honor Society}{September 2018--present}
+%  \cvitem{Tau Beta Pi Engineering Honor Society Society}{November 2018--present}
+  \cvitem{Gamecock Sailing Team}{January 2018--present}
+%   \cvitem{Carolina Ballroom Club}{September 2018--present}
 
-  \item FIRST Tech Challenge Team 327 \hfill \textit{October 2015--April 2017}
-  \begin{itemize}
-    \item Team Captain and Programming Captain, 2017
-  \end{itemize}
-  \item Microgravity Research Club \hfill \textit{April 2016--March 2017}
+%  \cvitem{FIRST Tech Challenge Team 327}{October 2015--April 2017}
+%  \begin{itemize}
+%    \item Team Captain and Programming Captain, 2017
+%  \end{itemize}
+%  \cvitem{Microgravity Research Club}{April 2016--March 2017}
 \end{itemize}
 
-\section{Relevant Coursework}
-\subsection{\textbf{University of South Carolina}}
+\section{Relevant Skills}
+\subsection{Computer Science}
+\vspace{-\topsep}
+\begin{multicols}{3}
 \begin{itemize}
-  \item \textbf{Computer Science}: Digital Logic,  C++, Software Engineering, Computer Architecture, Assembly Code, Image Processing
-  \item \textbf{Mathematics}: Vector Calculus, Transition to Advanced Mathematics, Linear Algebra, Discrete Mathematics
+  \item Python
+  \item C/C++
+  \item Java
+  \item Linux
+  \item Computer Vision
+  \item Image Processing
+  \item Software Engineering
+  \item Machine Learning
+  \item Game Design
 \end{itemize}
-\subsection{\textbf{SC Governor's School for Science and Mathematics}}
+\end{multicols}
+\subsection{Mathematics}
+\vspace{-\topsep}
+\begin{multicols}{3}
 \begin{itemize}
-  \item \textbf{Computer Science}: Linux, C++, Java, Python, ROS, Computer Vision, Robotics, Machine Learning, Game Design
-  \item \textbf{Mathematics}: Abstract Algebra, Single Variable Calculus, Numerical Integration
+  \item Multi-Variable Calculus
+  \item Numerical Integration
+  \item Mathematical Logic
+  \item Linear Algebra
+  \item Discrete Mathematics
+  \item Abstract Algebra
 \end{itemize}
+\end{multicols}
 
 \section{Publications}
   \nocite{*}
