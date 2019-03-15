@@ -1,7 +1,11 @@
-\documentclass[10pt,letterpaper,roman]{moderncv}
+\documentclass[\ifdefined\cv11pt\else10pt\fi,letterpaper,roman]{moderncv}
+
+\newcommand{\cvonly}[1]{\ifdefined\cv#1\fi}
+\newcommand{\resumeonly}[1]{\ifdefined\cv\else#1\fi}
+\newcommand{\deprecated}[1]{}
 
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.7in]{geometry}
+\usepackage[margin=\ifdefined\cv0.75in\else0.5in\fi]{geometry}
 \usepackage{todonotes}
 \usepackage[backend=bibtex,style=ieee]{biblatex}
 \usepackage{bibentry}
@@ -19,8 +23,13 @@
 \renewcommand{\cvitem}[2]{\item {#1}\hfill\textit{#2}}
 
 \renewcommand*{\namefont}{\fontsize{18}{20}\bfseries\upshape}
-\renewcommand*{\sectionfont}{\fontsize{11}{12}\bfseries\upshape}
-\renewcommand*{\subsectionfont}{\fontsize{10}{11}\bfseries\upshape}
+\ifdefined\cv
+	\renewcommand*{\sectionfont}{\fontsize{16}{18}\bfseries\upshape}
+	\renewcommand*{\subsectionfont}{\fontsize{14}{16}\bfseries\upshape}
+\else
+	\renewcommand*{\sectionfont}{\fontsize{11}{12}\bfseries\upshape}
+	\renewcommand*{\subsectionfont}{\fontsize{10}{11}\bfseries\upshape}
+\fi
 
 \newcommand{\st}{\textsuperscript{st}\xspace}
 \newcommand{\nd}{\textsuperscript{nd}\xspace}
@@ -28,21 +37,26 @@
 
 \name{Hunter}{Damron}
 \address{4569 Edgeland Road}{Edgemoor, SC}{}
+%\address{1000 Whaley Street}{Apt. 1069}{Columbia, SC}
 \phone[mobile]{+1~(803)~448~4411}
 \email{hdamron@email.sc.edu}
 %\homepage{cse.sc.edu/~hdamron}
 \social[github]{github.com/hdamron17}
+%\extrainfo{Citizen of U.S.A.}
 
 \begin{document}
 \makecvtitle{}
-\vspace*{-1.5cm}
+\vspace*{\ifdefined\cv-1cm\else-1.5cm\fi}
 \section{Education}
 \cventry{May 2021}{BS, Computer Science and Mathematics Double Major}{University of South Carolina Honors College}{Columbia, SC}{GPA: 3.946, Major GPA: 4.0}{}
+\cvonly{\cventry{May 2017}{High School Diploma}{SC Governor's School for Science and Mathematics}{Hartsville, SC}{GPA: 4.0}{}}
 
 \section{Experience}
 \cventry{November 2017--present}{Research Intern under Ioannis Rekleitis}{Autonomous Field Robotics Laboratory, USC}{Columbia, SC}{}{
 \begin{itemize}
 	\item Develop and test methods of cooperative localization and path planning for underwater robots.
+	\item Presenter at 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2018).
+	\item Conduct experiments and collaborate with other marine robotics researchers at Bellairs Research Center, Barbados.
 \end{itemize}}
 
 \cventry{August 2018--December 2018}{Introductory Computer Sciene Lab Teaching Assistant}{University of South Carolina}{Columbia, SC}{}{}
@@ -59,37 +73,52 @@
 	\item Helped start Calendry Technologies and its GoHartsville Project to consolidate information about community events from multiple sources into one calendar using an automated system.
 \end{itemize}}
 
-\cventry{August 2016--May 2017}{Volunteer Physics and Computer Science Tutor}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{}{}
+\cvonly{\cventry{August 2016--May 2017}{Volunteer Physics and Computer Science Tutor}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{}{}}
 
 \section{\textbf{Honors and Awards}}
 \begin{itemize}
+	\cvonly{
+		\cvitem{Magellan Voyager Travel Award}{October 2018}
+		\cvitem{South Carolina Honors College Scholarly Research Travel Support Award}{October 2018}
+		\cvitem{IROS Student and Developing Countries Travel Award}{October 2018}
+	}
 	\cvitem{Carolina Scholar Award}{August 2017}
-	\cvitem{ACM ICPC Division I College of Charleston 3\rd Place 2017, 2\nd Place 2018}{November 2017 and 2018}
-	\cvitem{\parbox[t]{0.8\linewidth}{ACM Code-A-Thon Division 2\nd Place Fall 2017, Division 1\st Place Spring 2018, Highest Division 2\nd Place Fall 2018\vspace*{3pt}}}{October 2018}
+	\cvitem{ACM ICPC Division I College of Charleston 3\rd Place 2017, 2\nd Place 2018}{November 2018}
+	\cvitem{\parbox[t]{0.75\linewidth}{ACM Code-A-Thon Division 2\nd Place Fall 2017, Division 1\st Place Spring 2018, Highest Division 2\nd Place Fall 2018}\resumeonly{\vspace*{3pt}}}{October 2018}
+	\cvonly{\cvitem{Senior Computer Science Award}{May 2017}}
 	\cvitem{Eagle Scout Rank}{November 2016}
+	\cvonly{
+		\cvitem{University of Rochester Bausch and Lomb Honorary Science Award}{May 2016}
+		\cvitem{Research Experience Scholars Program Travel Award}{April 2016}
+	}
 \end{itemize}
 
+\cvonly\newpage
 \section{\textbf{Organizations}}
 \begin{itemize}
 	\cvitem{Tau Beta Pi Engineering Honor Society Society}{November 2018--present}
 	\cvitem{Pi Mu Epsilon Mathematics Honor Society}{September 2018--present}
+	\cvitem{Institute of Electrical and Electronics Engineers}{July 2018--present}
 	\cvitem{Association of Computing Machinery}{November 2017--present}
-	%	\cvitem{Institute of Electrical and Electronics Engineers}{July 2018--present}
-	\cvitem{Gamecock Sailing Team (Keelboat Team Vice Chair, January 2019--present)}{January 2018--present}
+	\cvitem{Gamecock Sailing Team (Keelboat Vice Chair, January 2019--present)}{January 2018--present}
+	\cvonly{
+		\cvitem{FTC Robotics Team 327 (Captain and Programming Captain 2017)}{October 2015--April 2017}
+		\cvitem{Microgravity Research Club}{April 2016--March 2017}
+	}
 \end{itemize}
 
+\setlength{\premulticols}{0pt}
 \section{Relevant Skills}
-\subsection{Computer Science}
-\vspace{-1.2\topsep}
-\begin{multicols}{3}
+\begin{multicols}{3}[\subsection{Computer Science}\vspace*{-1.2\topsep}]
 \begin{itemize}
 	\item Python
 	\item C/C++
 	\item Java
 	\item Bourne Shell/Bash
+	\item Robotics
 	\item Data Structures and Algorithms
 	\item Operating Systems
-	\item Computer Vision
+	\deprecated{\item Computer Vision}
 	\item Image Processing
 	\item Computer Architecture
 	\item Software Engineering
@@ -97,13 +126,14 @@
 	\item Game Design
 \end{itemize}
 \end{multicols}
-\subsection{Mathematics}
-\vspace{-1.2\topsep}
-\begin{multicols}{3}
+
+\begin{multicols}{3}[\subsection{Mathematics}\vspace*{-1.2\topsep}]
 \begin{itemize}
 	\item Multi-Variable Calculus
-%	\item Numerical Integration
-%	\item Engineering Statistics
+	\cvonly{
+		\item Numerical Integration
+		\item Engineering Statistics
+	}
 	\item Introduction to Proofs
 	\item Linear Algebra
 	\item Discrete Mathematics
