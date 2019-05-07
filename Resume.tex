@@ -5,9 +5,9 @@
 \newcommand{\deprecated}[1]{}
 
 \usepackage[utf8]{inputenc}
-\usepackage[margin=\ifdefined\cv0.75in\else0.5in\fi]{geometry}
+\usepackage[margin=\ifdefined\cv0.75in\else0.65in\fi]{geometry}
 \usepackage{todonotes}
-\usepackage[backend=bibtex,style=ieee]{biblatex}
+\usepackage[backend=bibtex,style=ieee,sorting=ydnt]{biblatex}
 \usepackage{bibentry}
 \usepackage{multicol}
 \usepackage{xspace}
@@ -44,47 +44,53 @@
 \social[github]{github.com/hdamron17}
 %\extrainfo{Citizen of U.S.A.}
 
+\let\oldsection\section
+\renewcommand{\section}[1]{\vspace*{-1ex}\oldsection{#1}}
+\let\oldsubsection\subsection
+\renewcommand{\subsection}[1]{\vspace*{-1.5ex}\oldsubsection{#1}}
+
 \begin{document}
 \makecvtitle{}
-\vspace*{\ifdefined\cv-1cm\else-1.5cm\fi}
+\vspace*{\ifdefined\cv-1cm\else-8ex\fi}
 \section{Education}
 \cventry{May 2021}{BS, Computer Science and Mathematics Double Major}{University of South Carolina Honors College}{Columbia, SC}{GPA: 3.946, Major GPA: 4.0}{}
 \cvonly{\cventry{May 2017}{High School Diploma}{SC Governor's School for Science and Mathematics}{Hartsville, SC}{GPA: 4.0}{}}
 
 \section{Experience}
-\cventry{November 2017--present}{Research Intern under Ioannis Rekleitis}{Autonomous Field Robotics Laboratory, USC}{Columbia, SC}{}{
+\cventry{November 2017--present}{Undergraduate Researcher under Ioannis Rekleitis}{Autonomous Field Robotics Laboratory, USC}{Columbia, SC}{}{
 \begin{itemize}
 	\item Develop and test methods of cooperative localization and path planning for underwater robots.
-	\item Presenter at 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2018).
+	\item Present at 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2018).
 	\item Conduct experiments and collaborate with other marine robotics researchers at Bellairs Research Center, Barbados.
 \end{itemize}}
 
 \cventry{August 2018--December 2018}{Introductory Computer Sciene Lab Teaching Assistant}{University of South Carolina}{Columbia, SC}{}{}
 
-\cventry{June 2017--July 2017}{STEM Summer Camp Student Assistant}{South Carolina Governor's School for Science and Mathematics -- GoSciTech}{Hartsville, SC}{}{}
+\cvonly{\cventry{June 2017--July 2017}{STEM Summer Camp Student Assistant}{South Carolina Governor's School for Science and Mathematics -- GoSciTech}{Hartsville, SC}{}{}}
 
 \cventry{June 2016--July 2016}{Research Intern under Marco Hirsch}{German Research Center for Artificial Intelligence (DKFI)}{Kaiserslautern, Germany}{}{
 \begin{itemize}
-	\item Designed a non-linear method of administering questionnaires for improved efficiency.
+	\item Designed non-linear method of administering questionnaires for improved efficiency.
 \end{itemize}}
 
-\cventry{November 2016--May 2017}{Cofounder and Software Developer}{Calendry Technologies}{Hartsville, SC}{}{
+\cvonly{\cventry{November 2016--May 2017}{Cofounder and Software Developer}{Calendry Technologies}{Hartsville, SC}{}{
 \begin{itemize}
 	\item Helped start Calendry Technologies and its GoHartsville Project to consolidate information about community events from multiple sources into one calendar using an automated system.
-\end{itemize}}
+\end{itemize}}}
 
 \cvonly{\cventry{August 2016--May 2017}{Volunteer Physics and Computer Science Tutor}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{}{}}
 
 \section{\textbf{Honors and Awards}}
 \begin{itemize}
-	\cvonly{
-		\cvitem{Magellan Voyager Travel Award}{October 2018}
-		\cvitem{South Carolina Honors College Scholarly Research Travel Support Award}{October 2018}
-		\cvitem{IROS Student and Developing Countries Travel Award}{October 2018}
-	}
-	\cvitem{Carolina Scholar Award}{August 2017}
+	\cvitem{McNAIR Junior Fellows Research Award}{May 2019}
+	\cvitem{South Carolina Honors College Science Undergraduate Research Fellowships (SURF) Grant}{May 2019}
+	\cvitem{Phi Beta Kappa Freshman Award}{April 2019}
 	\cvitem{ACM ICPC Division I College of Charleston 3\rd Place 2017, 2\nd Place 2018}{November 2018}
-	\cvitem{\parbox[t]{0.75\linewidth}{ACM Code-A-Thon Division 2\nd Place Fall 2017, Division 1\st Place Spring 2018, Highest Division 2\nd Place Fall 2018}\resumeonly{\vspace*{3pt}}}{October 2018}
+	\cvitem{Magellan Voyager Travel Award}{October 2018}
+	\cvitem{South Carolina Honors College Scholarly Research Travel Support Award}{October 2018}
+	\cvitem{IROS Student and Developing Countries Travel Award}{October 2018}
+	\cvitem{\parbox[t]{0.75\linewidth}{ACM Code-A-Thon Division 2\nd Place Fall 2017, Division 1\st Place Spring 2018, Highest Division 2\nd Place Fall 2018}\resumeonly{\vspace*{2pt}}}{October 2018}
+	\cvitem{Carolina Scholar Award}{August 2017}
 	\cvonly{\cvitem{Senior Computer Science Award}{May 2017}}
 	\cvitem{Eagle Scout Rank}{November 2016}
 	\cvonly{
@@ -99,7 +105,7 @@
 	\cvitem{Tau Beta Pi Engineering Honor Society Society}{November 2018--present}
 	\cvitem{Pi Mu Epsilon Mathematics Honor Society}{September 2018--present}
 	\cvitem{Institute of Electrical and Electronics Engineers}{July 2018--present}
-	\cvitem{Association of Computing Machinery}{November 2017--present}
+	\cvitem{Association of Computing Machinery}{November 2017--present}  %TODO (Chapter President, August 2019--present)
 	\cvitem{Gamecock Sailing Team (Keelboat Vice Chair, January 2019--present)}{January 2018--present}
 	\cvonly{
 		\cvitem{FTC Robotics Team 327 (Captain and Programming Captain 2017)}{October 2015--April 2017}
@@ -115,32 +121,39 @@
 	\item C/C++
 	\item Java
 	\item Bourne Shell/Bash
+	\cvonly{\item MATLAB}
 	\item Robotics
+	\resumeonly{\item Machine Learning}  % Moved to math in CV
+	\item Compiler Design
 	\item Data Structures and Algorithms
 	\item Operating Systems
-	\deprecated{\item Computer Vision}
 	\item Image Processing
+	\cvonly{\item Computer Vision}
 	\item Computer Architecture
 	\item Software Engineering
-	\item Artificial Intelligence
-	\item Game Design
+	\cvonly{\item Game Design}
 \end{itemize}
 \end{multicols}
+\vspace{-1ex}
 
 \begin{multicols}{3}[\subsection{Mathematics}\vspace*{-1.2\topsep}]
 \begin{itemize}
-	\item Multi-Variable Calculus
-	\cvonly{
-		\item Numerical Integration
-		\item Engineering Statistics
-	}
-	\item Introduction to Proofs
+	\cvonly{\item Machine Learning}  % Moved to CS in resume
+	\item Theory of Computation
+	\item Mathematical Formal Logic
+	\item Algebraic Structures
 	\item Linear Algebra
 	\item Discrete Mathematics
-	\item Algebraic Structures
-	\item Mathematical Formal Logic
+	\item Multi-Variable Calculus
+	\cvonly{
+		\item Introduction to Proofs
+		\item Mathematical Linguistics
+		\item Engineering Statistics
+		\item Numerical Integration
+	}
 \end{itemize}
 \end{multicols}
+\vspace{-2ex}
 
 \section{Publications}
 	\nocite{*}
