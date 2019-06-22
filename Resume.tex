@@ -5,7 +5,7 @@
 \newcommand{\deprecated}[1]{}
 
 \usepackage[utf8]{inputenc}
-\usepackage[margin=\ifdefined\cv0.75in\else0.6in\fi]{geometry}
+\usepackage[margin=\ifdefined\cv0.75in\else0.65in\fi]{geometry}
 \usepackage{todonotes}
 \usepackage[backend=bibtex,style=ieee,sorting=ydnt]{biblatex}
 \usepackage{bibentry}
@@ -45,32 +45,38 @@
 %\extrainfo{Citizen of U.S.A.}
 
 \let\oldsection\section
-\renewcommand{\section}[1]{\vspace*{-1.1ex}\oldsection{#1}}
+\renewcommand{\section}[1]{\vspace*{-1.3ex}\oldsection{#1}}
 \let\oldsubsection\subsection
-\renewcommand{\subsection}[1]{\vspace*{-1.5ex}\oldsubsection{#1}}
+\renewcommand{\subsection}[1]{\vspace*{-1.9ex}\oldsubsection{#1}}
+
+\renewcommand\labelitemi{\raisebox{0.15ex}{$\circ$\hspace{-0.25em}}}
 
 \begin{document}
 \makecvtitle{}
 \vspace*{\ifdefined\cv-1cm\else-8ex\fi}
 \section{Education}
 \cventry{May 2021}{BS, Computer Science and Mathematics Double Major}{University of South Carolina Honors College}{Columbia, SC}{GPA: 3.959, Major GPA: 4.0}{}
+% TODO Distinction in Mathematics
+% TODO Graduation with Leadership Distinction in Research
 \cvonly{\cventry{May 2017}{High School Diploma}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{GPA: 4.0}{}}
 
 \section{Experience}
 \cventry{November 2017--present}{Undergraduate Researcher under Ioannis Rekleitis}{Autonomous Field Robotics Laboratory, USC}{Columbia, SC}{}{
 \begin{itemize}
-	\item Develop and test methods of cooperative localization and path planning for underwater robots.
-	\item Present at 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2018).
-	\item Conduct experiments and collaborate with other marine robotics researchers at Bellairs Research Center, Barbados.
+	\item Develop and test methods for localization and path planning for underwater robots.
+	\item Conducted field trials and participated in conference at Bellairs Research Center, Barbados.\hfill\textit{January 2019}
+	\item Presented \cite{uwcl} at IROS 2018 conference in Madrid, Spain.\hfill\textit{October 2018}
+	\item Collaborated with Interactive Robotics and Vision Laboratory at University of Minnesota.\hfill\textit{August 2018}
 \end{itemize}}
 
 \cventry{August 2018--December 2018}{Introductory Computer Sciene Lab Teaching Assistant}{University of South Carolina}{Columbia, SC}{}{}
 
-\cvonly{\cventry{June 2017--July 2017}{STEM Summer Camp Student Assistant}{South Carolina Governor's School for Science and Mathematics -- GoSciTech}{Hartsville, SC}{}{}}
+\cvonly{\cventry{June 2017--July 2017}{GoSciTech STEM Summer Camp Student Assistant}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{}{}}
 
 \cventry{June 2016--July 2016}{Research Intern under Marco Hirsch}{German Research Center for Artificial Intelligence (DKFI)}{Kaiserslautern, Germany}{}{
 \begin{itemize}
 	\item Designed non-linear method of administering questionnaires for improved efficiency.
+	\cvonly{\item Presented \cite{dfki2016} at 2017 SCGSSM Annual Research Colloquium.\hfill\textit{February 2017}}
 \end{itemize}}
 
 \cvonly{\cventry{November 2016--May 2017}{Cofounder and Software Developer}{Calendry Technologies}{Hartsville, SC}{}{
@@ -82,19 +88,21 @@
 
 \section{\textbf{Honors and Awards}}
 \begin{itemize}
-	\cvitem{McNAIR Junior Fellows Research Award}{May 2019}
+	% TODO Goldwater Scholarship
+	% TODO Magellan Scholar Award
+	\cvitem{McNAIR Junior Fellows Research Grant}{May 2019}
 	\cvitem{South Carolina Honors College Science Undergraduate Research Fellowships (SURF) Grant}{May 2019}
 	\cvitem{Phi Beta Kappa Freshman Award}{April 2019}
 	\cvitem{ACM ICPC Division I College of Charleston 3\rd Place 2017, 2\nd Place 2018}{November 2018}
 	\cvitem{Magellan Voyager Travel Award}{October 2018}
 	\cvitem{South Carolina Honors College Scholarly Research Travel Support Award}{October 2018}
 	\cvitem{IROS Student and Developing Countries Travel Award}{October 2018}
-	\cvitem{\parbox[t]{0.75\linewidth}{ACM Code-A-Thon Division 2\nd Place Fall 2017, Division 1\st Place Spring 2018, Highest Division 2\nd Place Fall 2018}\resumeonly{\vspace*{2pt}}}{October 2018}
+	\cvitem{\parbox[t]{0.75\linewidth}{ACM Code-A-Thon Division 2\nd Place Fall 2017, Division 1\st Place Spring 2018, Highest Division 2\nd Place Fall 2018}\vspace*{0.6ex}}{October 2018}
 	\cvitem{Carolina Scholar Award}{August 2017}
 	\cvonly{\cvitem{Senior Computer Science Award}{May 2017}}
 	\cvitem{Eagle Scout Rank}{November 2016}
+	\cvitem{University of Rochester Bausch and Lomb Honorary Science Award}{May 2016}
 	\cvonly{
-		\cvitem{University of Rochester Bausch and Lomb Honorary Science Award}{May 2016}
 		\cvitem{Research Experience Scholars Program Travel Award}{April 2016}
 	}
 \end{itemize}
@@ -105,7 +113,7 @@
 	\cvitem{Tau Beta Pi Engineering Honor Society Society}{November 2018--present}
 	\cvitem{Pi Mu Epsilon Mathematics Honor Society}{September 2018--present}
 	\cvitem{Institute of Electrical and Electronics Engineers}{July 2018--present}
-	\cvitem{Association of Computing Machinery (Chapter President, May 2019--present)}{November 2017--present}
+	\cvitem{Association of Computing Machinery (Chapter President, June 2019--present)}{November 2017--present}
 	\cvitem{Gamecock Sailing Team (Keelboat Vice Chair, January 2019--present)}{January 2018--present}
 	\cvonly{
 		\cvitem{FTC Robotics Team 327 (Captain and Programming Captain, 2017)}{October 2015--April 2017}
@@ -115,8 +123,8 @@
 
 \setlength{\premulticols}{0pt}
 \section{Skills}
-\textit{Programming Languages:} (proficient) Python, C/C++, Java, Bourne Shell/Bash, \LaTeX; (familiar) Haskell, MATLAB\cvonly{, x86 Assembly} \par % Common Lisp
-\textit{Environments and Tools:} Linux/Unix, Git, GNU Make, CMake, NumPy, Matplotlib, TensorFlow, ROS, OpenCV, lex \& yacc \par % Docker, Travis CI
+\textit{Programming Languages:} (proficient) Python, C/C++, Java, Bourne Shell/Bash, \LaTeX; (familiar) Haskell, MATLAB\cvonly{, Steel Bank Common Lisp, x86 Assembly} \par
+\textit{Environments/Tools:} Linux/Unix, Git, Make, CMake, NumPy, Matplotlib, TensorFlow, ROS, OpenCV\cvonly{, Eigen}, lex \& yacc\cvonly{, Docker, Noweb Literate Programming} \par % Travis CI
 \begin{multicols}{3}[\section{Relevant Cousework}\vspace*{-1.2\topsep}]
 \begin{itemize}
 	\item Machine Learning
@@ -141,7 +149,20 @@
 	}
 \end{itemize}
 \end{multicols}
-\vspace{-2ex}
+\vspace{-2.8ex}
+
+\cvonly{
+\section{Additional Training}
+\begin{itemize}
+	\cvitem{
+		\parbox[t]{0.85\linewidth}{Collaborative Institutional Training Initiative (CITI) Responsible Conduct of Research for Engineers}}{May 2019}
+\end{itemize}
+}
+
+% IDEA: Competitions Section
+% - ACM Code-A-Thons (and awards)
+% - ICPC (and awards)
+% - Colahacks (April 2018)
 
 \section{Publications}
 	\nocite{*}
