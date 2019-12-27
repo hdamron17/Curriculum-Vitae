@@ -1,11 +1,12 @@
 \documentclass[\ifdefined\cv11pt\else10pt\fi,letterpaper,roman]{moderncv}
+\def\cv{}
 
 \newcommand{\cvonly}[1]{\ifdefined\cv#1\fi}
 \newcommand{\resumeonly}[1]{\ifdefined\cv\else#1\fi}
 \newcommand{\deprecated}[1]{}
 
 \usepackage[utf8]{inputenc}
-\usepackage[margin=\ifdefined\cv0.65in\else0.50in\fi]{geometry}
+\usepackage[margin=\ifdefined\cv0.65in\else0.55in\fi]{geometry}
 \usepackage{todonotes}
 \usepackage[backend=biber,style=ieee,sorting=ydnt]{biblatex}
 \usepackage{bibentry}
@@ -14,8 +15,8 @@
 \usepackage{enumitem}
 \setlist{nolistsep, noitemsep, nosep, topsep=0pt}
 
-\bibliography{Publications}
-\cvonly{\bibliography{Publications-CV}}
+\bibliography{../Publications}
+\cvonly{\bibliography{../Publications-CV}}
 
 \moderncvstyle{banking}
 \moderncvcolor{black}
@@ -56,31 +57,37 @@
 \makecvtitle{}
 \vspace*{\ifdefined\cv-7ex\else-8ex\fi}
 \section{Education}
-\cventry{May 2021}{BS, Computer Science and Mathematics Double Major}{University of South Carolina Honors College}{Columbia, SC}{GPA: 3.967 Major GPA: 4.0}{}
+\cventry{May 2021}{BS, Computer Science and Mathematics Double Major}{University of South Carolina Honors College}{Columbia, SC}{GPA: 3.959, Major GPA: 4.0}{}
 % TODO Distinction in Mathematics
 % TODO Graduation with Leadership Distinction in Research
 \cvonly{\cventry{May 2017}{High School Diploma}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{GPA: 4.0}{}}
 
 \section{Experience}
-\cventry{November 2017--present}{Undergraduate Researcher under Ioannis Rekleitis}{Autonomous Field Robotics Laboratory, USC}{Columbia, SC}{}{
+\cventry{July 2019--present}{Lab Assistant under Dr. Annie Bourbonnais}{Marine Stable Isotope Biogeochemistry Laboratory, USC}{Columbia, SC}{}{
 \begin{itemize}
-	\item Develop and test methods for localization and path planning for underwater robots.
-	\item Presented \cite{damron2019} at USC Summer Research Symposium.\hfill\textit{August 2019}
+	\item Write operation manual for PAL autosampler
+	\item Install and test custom tray configuration for autosampler
+\end{itemize}}
+
+\cventry{August 2018--present}{Grader for MATH 574:\ Discrete Mathematics I --- 2 Semesters}{University of South Carolina}{Columbia, SC}{}{
+\begin{itemize}
+	\item Evaluate student performance on homework assignments
+\end{itemize}}
+
+\cventry{November 2017--present}{Undergraduate Researcher under Dr. Ioannis Rekleitis}{Autonomous Field Robotics Laboratory, USC}{Columbia, SC}{}{
+\begin{itemize}
+	\item Develop and test methods for localization and path planning for underwater robots, including~\cite{marios_trajopt}
+	\item Presented \cite{damron2019} at the university's Summer Research Symposium
 	\item Conducted field trials and participated in conference at Bellairs Research Center, Barbados.\hfill\textit{January 2019}
 	\item Presented \cite{uwcl} at IROS 2018 conference in Madrid, Spain.\hfill\textit{October 2018}
 	\item Collaborated with Interactive Robotics and Vision Laboratory at University of Minnesota.\hfill\textit{August 2018}
 \end{itemize}}
 
-\cventry{July 2019--November 2019}{Undergraduate Researcher under Annie Bourbonnais}{Marine Stable Isotope Biogeochemistry Laboratory, USC}{Columbia, SC}{}{\begin{itemize}
-	\item Set up and calibrated PAL autosampler for chemical oceanography research.
-	\item Wrote operation manual for PAL autosampler.
+\cventry{August 2018--December 2018}{Algorithmic Design I Lab Teaching Assistant}{University of South Carolina}{Columbia, SC}{}{
+\begin{itemize}
+	\item Taught introductory computer science topics in Java
+	\item Graded student submissions for lab assignments
 \end{itemize}}
-
-\cventry{August 2018--December 2018}{Introductory Computer Sciene Lab Teaching Assistant}{University of South Carolina}{Columbia, SC}{}{}
-
-\cvonly{\cventry{August 2018--December 2019}{Grader for MATH 574:\ Discrete Mathematics I --- 2 Semesters}{University of South Carolina}{Columbia, SC}{}{}}
-
-\cvonly{\cventry{June 2017--July 2017}{GoSciTech STEM Summer Camp Student Assistant}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{}{}}
 
 \cventry{June 2016--July 2016}{Research Intern under Marco Hirsch}{German Research Center for Artificial Intelligence (DKFI)}{Kaiserslautern, Germany}{}{
 \begin{itemize}
@@ -88,21 +95,14 @@
 	\cvonly{\item Presented \cite{dfki2016} at 2017 SCGSSM Annual Research Colloquium.\hfill\textit{February 2017}}
 \end{itemize}}
 
-\cvonly{\cventry{November 2016--May 2017}{Cofounder and Software Developer}{Calendry Technologies}{Hartsville, SC}{}{
-\begin{itemize}
-	\item Helped start Calendry Technologies and its GoHartsville Project to consolidate information about community events from multiple sources into one calendar using an automated system.
-\end{itemize}}}
-
-\cvonly{\cventry{August 2016--May 2017}{Volunteer Physics and Computer Science Tutor}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{}{}}
-
 \section{\textbf{Honors and Awards}}
 \begin{itemize}
+	% TODO Goldwater Scholarship
 	% TODO Magellan Scholar Award
-	\cvitem{Computing Research Association Outstanding Undergraduate Researcher Honorable Mention}{December 2019}
-	\cvitem{ACM ICPC Division I College of Charleston 3\rd Place 2017, 2\nd Place 2018, 2\nd Place 2019}{November 2019}
 	\cvitem{McNAIR Junior Fellows Research Grant}{May 2019}
 	\cvitem{South Carolina Honors College Science Undergraduate Research Fellowship (SURF) Grant}{May 2019}
 	\cvitem{Phi Beta Kappa Freshman Award}{April 2019}
+	\cvitem{ACM ICPC Division I College of Charleston 3\rd Place 2017, 2\nd Place 2018}{November 2018}
 	\cvitem{Magellan Voyager Travel Award}{October 2018}
 	\cvitem{South Carolina Honors College Scholarly Research Travel Support Award}{October 2018}
 	\cvitem{IROS Student and Developing Countries Travel Award}{October 2018}
@@ -119,26 +119,19 @@
 \cvonly\newpage
 \section{\textbf{Organizations}}
 \begin{itemize}
-	\cvitem{Association of Computing Machinery (Chapter President, June 2019--present)}{November 2017--present}
-	\cvitem{Gamecock Sailing Team (Keelboat Vice Chair, January 2019--present)}{January 2018--present}
-	\cvitem{Open Source South Carolina Meetup Group}{March 2019--present}
 	\cvitem{Tau Beta Pi Engineering Honor Society Society}{November 2018--present}
 	\cvitem{Pi Mu Epsilon Mathematics Honor Society}{September 2018--present}
 	\cvitem{Institute of Electrical and Electronics Engineers}{July 2018--present}
-	\cvonly{
-		\cvitem{FTC Robotics Team 327 (Captain and Programming Captain, 2017)}{October 2015--April 2017}
-		\cvitem{Microgravity Research Club}{April 2016--March 2017}
-	}
+	\cvitem{Association of Computing Machinery (Chapter President, June 2019--present)}{November 2017--present}
+	\cvitem{Gamecock Sailing Team (Keelboat Vice Chair, January 2019--present)}{January 2018--present}
 \end{itemize}
 
 \setlength{\premulticols}{0pt}
 \section{Skills}
-\textit{Programming Languages:} (proficient) Python, C/C++, Java, Bourne Shell/Bash, \LaTeX; (familiar) Haskell, MATLAB \par
-\textit{Environments/Tools:} Linux/Unix, Git, Make, CMake, NumPy, Matplotlib, TensorFlow, ROS, OpenCV\cvonly{, Eigen}, lex \& yacc\cvonly{, Docker, Noweb Literate Programming} \par % Travis CI
+\textit{Programming Languages:} (proficient) Python, C/C++, Java, Bash, \LaTeX; (familiar) Haskell, Prolog, MATLAB \par
+\textit{Environments/Tools:} Linux/Unix, Git, Make, CMake, NumPy, Matplotlib, TensorFlow, ROS, OpenCV, lex \& yacc \par % Travis CI
 \begin{multicols}{3}[\section{Relevant Cousework}\vspace*{-1.2\topsep}]
 \begin{itemize}
-	\item Programming Languages
-	\item Computer Networks
 	\item Machine Learning
 	\item Theory of Computation
 	\item Compiler Design
@@ -148,19 +141,14 @@
 	\item Computer Architecture
 	\item Software Engineering
 	\cvonly{\item Game Design}
-	\item Real Analysis
-	\item Ordinary Differential Equations
-	\item Number Theory
 	\item Mathematical Formal Logic
 	\item Algebraic Structures
 	\item Linear Algebra
 	\item Discrete Mathematics
 	\cvonly{
 		\item Mathematical Linguistics
-		\item Multi-Variable Calculus
+%		\item Multi-Variable Calculus
 		\item Engineering Statistics
-		\item Computational Physics
-%		\item Introduction to Proofs
 	}
 \end{itemize}
 \end{multicols}
@@ -180,6 +168,6 @@
 % - Colahacks (April 2018)
 
 \section{Publications}
-	\nocite{*}
+	\nocite{uwcl,damron2019,dfki2016,marios_trajopt}
 	\printbibliography[heading=none]{}
 \end{document}
