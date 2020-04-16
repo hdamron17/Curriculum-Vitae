@@ -1,3 +1,4 @@
+\def\cv{}
 \documentclass[\ifdefined\cv11pt\else10pt\fi,letterpaper,roman]{moderncv}
 
 \newcommand{\cvonly}[1]{\ifdefined\cv#1\fi}
@@ -5,7 +6,7 @@
 \newcommand{\deprecated}[1]{}
 
 \usepackage[utf8]{inputenc}
-\usepackage[margin=\ifdefined\cv0.50in\else0.50in\fi]{geometry}
+\usepackage[margin=\ifdefined\cv0.7in\else0.50in\fi]{geometry}
 \usepackage{todonotes}
 \usepackage[backend=biber,style=ieee,sorting=ydnt]{biblatex}
 \usepackage{bibentry}
@@ -14,8 +15,8 @@
 \usepackage{enumitem}
 \setlist{nolistsep, noitemsep, nosep, topsep=0pt}
 
-\bibliography{Publications}
-\cvonly{\bibliography{Publications-CV}}
+\bibliography{../Publications}
+\cvonly{\bibliography{../Publications-CV}}
 
 \moderncvstyle{banking}
 \moderncvcolor{black}
@@ -54,43 +55,30 @@
 
 \begin{document}
 \makecvtitle{}
-\vspace*{\ifdefined\cv-8ex\else-8ex\fi}
+\vspace*{\ifdefined\cv-7ex\else-8ex\fi}
 \section{Education}
 \cventry{May 2021}{BS, Computer Science and Mathematics Double Major}{University of South Carolina Honors College}{Columbia, SC}{GPA: 3.967 Major GPA: 4.0}{}
 % TODO Distinction in Mathematics
 % TODO Graduation with Leadership Distinction in Research
-\cvonly{\cventry{May 2017}{High School Diploma}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{GPA: 4.0}{}}
-
-% TODO Add reserach interests section
 
 \section{Experience}
-\cventry{November 2017--present}{Undergraduate Researcher under Ioannis Rekleitis}{Autonomous Field Robotics Laboratory, UofSC}{Columbia, SC}{}{
+\cventry{November 2017--present}{Undergraduate Researcher under Ioannis Rekleitis}{Autonomous Field Robotics Laboratory, USC}{Columbia, SC}{}{
 \begin{itemize}
 	\item Develop and test methods for localization and path planning for underwater robots.
-	\item Peer reviewer for IROS 2020 conference.\hfill\textit{April 2020}
-	\item Presented \cite{damron2019} at UofSC Summer Research Symposium.\hfill\textit{August 2019}
-	\item Conducted field trials and participated in conference at Bellairs Research Institute, Barbados.\hfill\textit{January 2019}
+	\item Presented \cite{damron2019} at USC Summer Research Symposium.\hfill\textit{August 2019}
+	\item Conducted field trials and participated in conference at Bellairs Research Center, Barbados.\hfill\textit{January 2019}
 	\item Presented \cite{uwcl} at IROS 2018 conference in Madrid, Spain.\hfill\textit{October 2018}
-	\item Collaborated with Interactive Robotics and Vision Laboratory at University of Minnesota.\hfill\textit{August 2018}
+	\item Collaborated with Interactive Robotics and Vision Laboratory at the University of Minnesota.\hfill\textit{August 2018}
 \end{itemize}}
 
-% TODO fill in details, ensure correct lab
-\cventry{May 2020--August 2020}{Robotics Institute Summer Scholar (RISS) under Christoph Mertz}{Argo AI Center for Autonomous Vehicle Research, Carnegie Mellon University}{Pittsburgh, PA}{}{
-%\begin{itemize}
-%	\item HD map change detection
-%\end{itemize}
-}
-
-\cventry{July 2019--November 2019}{Undergraduate Researcher under Annie Bourbonnais}{Marine Stable Isotope Biogeochemistry Laboratory, UofSC}{Columbia, SC}{}{\begin{itemize}
+\cventry{July 2019--November 2019}{Undergraduate Researcher under Annie Bourbonnais}{Marine Stable Isotope Biogeochemistry Laboratory, USC}{Columbia, SC}{}{\begin{itemize}
 	\item Set up and calibrated PAL autosampler for chemical oceanography research.
 	\item Wrote operation manual for PAL autosampler.
 \end{itemize}}
 
-\cventry{August 2018--December 2019}{Grader for MATH 574: Discrete Mathematics I -- 2 Semesters}{University of South Carolina}{Columbia, SC}{}{}
+%\cvonly{\cventry{August 2018--December 2019}{Grader for MATH 574:\ Discrete Mathematics I --- 2 Semesters}{University of South Carolina}{Columbia, SC}{}{}}
 
 \cventry{August 2018--December 2018}{Introductory Computer Sciene Lab Teaching Assistant}{University of South Carolina}{Columbia, SC}{}{}
-
-\cvonly{\cventry{June 2017--July 2017}{GoSciTech STEM Summer Camp Student Assistant}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{}{}}
 
 \cventry{June 2016--July 2016}{Research Intern under Marco Hirsch}{German Research Center for Artificial Intelligence (DKFI)}{Kaiserslautern, Germany}{}{
 \begin{itemize}
@@ -98,58 +86,37 @@
 	\cvonly{\item Presented \cite{dfki2016} at 2017 SCGSSM Annual Research Colloquium.\hfill\textit{February 2017}}
 \end{itemize}}
 
-%\cvonly{\cventry{November 2016--May 2017}{Cofounder and Software Developer}{Calendry Technologies}{Hartsville, SC}{}{
-%\begin{itemize}
-%	\item Helped start Calendry Technologies and its GoHartsville Project to consolidate information about community events from multiple sources into one calendar using an automated system.
-%\end{itemize}}}
-
-%\cvonly{\cventry{August 2016--May 2017}{Volunteer Physics and Computer Science Tutor}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{}{}}
-
 \section{\textbf{Honors and Awards}}
 \begin{itemize}
-	% TODO IROS 2020 reviewer
 	% TODO Magellan Scholar Award
-	% TODO SURF Grant (round 2)
-	\cvitem{Victor W. Laurie Undergraduate Research Scholarship}{April 2020}
-	\cvitem{DAAD RISE Germany Internship}{March 2020}  % TODO cancelled due to coronavirus
 	\cvitem{CRA Outstanding Undergraduate Researcher Honorable Mention}{December 2019}
-	\cvitem{ACM ICPC Division I College of Charleston 3\rd Place 2017, 2\nd Place 2018, 2\nd Place 2019}{November 2019}
+	\cvitem{ACM ICPC Division I College of Charleston 3\rd Place 2017, 2\nd Place 2018 \& 2019}{November 2019}
 	\cvitem{McNAIR Junior Fellows Research Grant}{May 2019}
-	\cvitem{South Carolina Honors College Science Undergraduate Research Fellowship (SURF) Grant}{May 2019}
+	\cvitem{South Carolina Honors College Science Undergraduate Research Fellowship}{May 2019}
 	\cvitem{Phi Beta Kappa Freshman Award}{April 2019}
 	\cvitem{Magellan Voyager Travel Award}{October 2018}
 	\cvitem{South Carolina Honors College Scholarly Research Travel Support Award}{October 2018}
 	\cvitem{IROS Student and Developing Countries Travel Award}{October 2018}
 	\cvitem{\parbox[t]{0.75\linewidth}{ACM Code-A-Thon Division 2\nd Place Fall 2017, Division 1\st Place Spring 2018, Highest Division 2\nd Place Fall 2018}\vspace*{0.6ex}}{October 2018}
 	\cvitem{Carolina Scholar Award}{August 2017}
-	\cvonly{\cvitem{Senior Computer Science Award}{May 2017}}
 	\cvitem{Eagle Scout Rank}{November 2016}
-	\cvonly{\cvitem{University of Rochester Bausch and Lomb Honorary Science Award}{May 2016}}
-	\cvitem{Research Experience Scholars Program Travel Award}{April 2016}
+%	\cvitem{University of Rochester Bausch and Lomb Honorary Science Award}{May 2016}
 \end{itemize}
 
-%\cvonly\newpage
 \section{\textbf{Organizations}}
 \begin{itemize}
 	\cvitem{Association of Computing Machinery (Chapter President, June 2019--present)}{November 2017--present}
 	\cvitem{Gamecock Sailing Team (Keelboat Vice Chair, January 2019--present)}{January 2018--present}
-	\cvitem{Phi Beta Kappa Honor Society}{March 2020--present}  % TODO verify induction date
 	\cvitem{Open Source South Carolina Meetup Group}{March 2019--present}
 	\cvitem{Tau Beta Pi Engineering Honor Society Society}{November 2018--present}
 	\cvitem{Pi Mu Epsilon Mathematics Honor Society}{September 2018--present}
 	\cvitem{Institute of Electrical and Electronics Engineers}{July 2018--present}
-	\cvonly{
-		\cvitem{FTC Robotics Team 327 (Captain and Programming Captain, 2017)}{October 2015--April 2017}
-		\cvitem{Microgravity Research Club}{April 2016--March 2017}
-	}
 \end{itemize}
 
 \setlength{\premulticols}{0pt}
 \section{Skills}
 \textit{Programming Languages:} (proficient) Python, C/C++, Java, Bash, \LaTeX; (familiar) Haskell, MATLAB \par
-\textit{Environments/Tools:} Linux, Git, Make, CMake, NumPy, Matplotlib, TensorFlow, ROS, OpenCV\cvonly{, Eigen, Docker}
-
-\resumeonly{\pagebreak}  % TODO this should be unnecessary
+\textit{Environments/Tools:} Linux, Git, Make, CMake, NumPy, Matplotlib, TensorFlow, ROS, OpenCV, Eigen \par
 \begin{multicols}{3}[\section{Relevant Cousework}\vspace*{-1.2\topsep}]
 \begin{itemize}
 	\item Programming Languages
@@ -162,30 +129,30 @@
 	\item Image Processing
 	\item Computer Architecture
 	\item Software Engineering
-%	\cvonly{\item Game Design}
-	\item Real Analysis
+%	\item Real Analysis
 	\item Ordinary Differential Equations
-	\item Number Theory
-	\item Mathematical Formal Logic
-	\item Algebraic Structures
+%	\item Number Theory
+%	\item Mathematical Formal Logic
+%	\item Algebraic Structures
 	\item Linear Algebra
 	\item Discrete Mathematics
 	\cvonly{
-		\item Mathematical Linguistics
+%		\item Mathematical Linguistics
 		\item Multi-Variable Calculus
 		\item Engineering Statistics
-		\item Computational Physics
+%		\item Computational Physics
 %		\item Introduction to Proofs
 	}
 \end{itemize}
 \end{multicols}
 \vspace{-2.8ex}
 
+\cvonly{
 \section{Additional Training}
 \begin{itemize}
-	\cvitem{
-		\parbox[t]{0.85\linewidth}{Collaborative Institutional Training Initiative (CITI) Responsible Conduct of Research for Engineers}}{May 2019}
+	\cvitem{CITI Responsible Conduct of Research for Engineers}{May 2019}
 \end{itemize}
+}
 
 % IDEA: Competitions Section
 % - ACM Code-A-Thons (and awards)
@@ -193,6 +160,19 @@
 % - Colahacks (April 2018)
 
 \section{Publications}
-	\nocite{*}
 	\printbibliography[heading=none]{}
+
+\newpage
+\section{Supplementary Materials}
+\begin{itemize}[itemsep=1ex]
+	\item ``Navigation in the Presence of Obstacles for an Agile Autonomous Underwater Vehicle''~\cite{marios_trajopt} \par
+	arXiv:\ \url{https://arxiv.org/abs/1903.11750}
+	\item ``Hierarchical State Estimation of an Underwater Robot''~\cite{damron2019} \par
+	Poster:\ \url{https://github.com/hdamron17/Uberestimator-Summer-Symposium-2019/releases}
+	\item ``Underwater Surveying via Bearing Only Cooperative Localization''~\cite{uwcl} \par
+	arXiv:\ \url{https://arxiv.org/abs/1809.03594} \par
+	DOI:\ \url{https://doi.org/10.1109/IROS.2018.8593431}
+	\item CRA Undergraduate Researcher Award \par
+	\url{https://cra.org/about/awards/outstanding-undergraduate-researcher-award}
+\end{itemize}
 \end{document}
