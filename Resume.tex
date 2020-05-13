@@ -35,9 +35,8 @@
 \newcommand{\nd}{\textsuperscript{nd}\xspace}
 \newcommand{\rd}{\textsuperscript{rd}\xspace}
 
-\name{Hunter}{Damron}
+\name{\Large Hunter}{Damron}
 %\address{4569 Edgeland Road}{}{Edgemoor, SC}
-%\address{1000 Whaley Street}{Apt. 1069}{Columbia, SC}
 \address{1230 Pendleton Street}{Apt. 10D}{Columbia, SC}
 \phone[mobile]{+1~(803)~448~4411}
 \email{hdamron@email.sc.edu}
@@ -56,7 +55,7 @@
 \makecvtitle{}
 \vspace*{\ifdefined\cv-8ex\else-8ex\fi}
 \section{Education}
-\cventry{May 2021}{BS, Computer Science and Mathematics Double Major}{University of South Carolina Honors College}{Columbia, SC}{GPA: 3.967 Major GPA: 4.0}{}
+\cventry{May 2021}{BS, Computer Science and Mathematics Double Major}{University of South Carolina Honors College}{Columbia, SC}{GPA: 3.972 Major GPA: 4.0}{}
 % TODO Distinction in Mathematics
 % TODO Graduation with Leadership Distinction in Research
 \cvonly{\cventry{May 2017}{High School Diploma}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{GPA: 4.0}{}}
@@ -64,6 +63,10 @@
 % TODO Add reserach interests section
 
 \section{Experience}
+\cventry{May 2020--present}{Undergraduate Researcher under Laszlo Szekely}{Mathematics Department, UofSC}{Columbia, SC}{}{
+\begin{itemize}
+	\item Enumerate domino tilings of a rectangle up to isomorphism.
+\end{itemize}}
 \cventry{November 2017--present}{Undergraduate Researcher under Ioannis Rekleitis}{Autonomous Field Robotics Laboratory, UofSC}{Columbia, SC}{}{
 \begin{itemize}
 	\item Develop and test methods for localization and path planning for underwater robots.
@@ -76,9 +79,9 @@
 
 % TODO fill in details, ensure correct lab
 \cventry{May 2020--August 2020}{Robotics Institute Summer Scholar (RISS) under Christoph Mertz}{Argo AI Center for Autonomous Vehicle Research, Carnegie Mellon University}{Pittsburgh, PA}{}{
-%\begin{itemize}
-%	\item HD map change detection
-%\end{itemize}
+\begin{itemize}
+	\item Employ public bus data to detect changes in HD maps for autonomous car navigation.
+\end{itemize}
 }
 
 \cventry{July 2019--November 2019}{Undergraduate Researcher under Annie Bourbonnais}{Marine Stable Isotope Biogeochemistry Laboratory, UofSC}{Columbia, SC}{}{\begin{itemize}
@@ -86,9 +89,9 @@
 	\item Wrote operation manual for PAL autosampler.
 \end{itemize}}
 
-\cventry{August 2018--December 2019}{Grader for MATH 574: Discrete Mathematics I -- 2 Semesters}{University of South Carolina}{Columbia, SC}{}{}
+\cventry{August 2018--December 2019}{Grader for MATH 574: Discrete Mathematics I -- 2 Semesters}{Mathematics Department, UofSC}{Columbia, SC}{}{}
 
-\cventry{August 2018--December 2018}{Introductory Computer Sciene Lab Teaching Assistant}{University of South Carolina}{Columbia, SC}{}{}
+\cventry{August 2018--December 2018}{Introductory Computer Sciene Lab Teaching Assistant}{Computer Science Department, UofSC}{Columbia, SC}{}{}
 
 \cvonly{\cventry{June 2017--July 2017}{GoSciTech STEM Summer Camp Student Assistant}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{}{}}
 
@@ -108,7 +111,7 @@
 \section{\textbf{Honors and Awards}}
 \begin{itemize}
 	% TODO IROS 2020 reviewer
-	% TODO Magellan Scholar Award
+	% TODO Magellan Scholar Award :(
 	% TODO SURF Grant (round 2)
 	\cvitem{Victor W. Laurie Undergraduate Research Scholarship}{April 2020}
 	\cvitem{DAAD RISE Germany Internship}{March 2020}  % TODO cancelled due to coronavirus
@@ -144,14 +147,15 @@
 	}
 \end{itemize}
 
+\resumeonly{\pagebreak}
 \setlength{\premulticols}{0pt}
 \section{Skills}
 \textit{Programming Languages:} (proficient) Python, C/C++, Java, Bash, \LaTeX; (familiar) Haskell, MATLAB \par
 \textit{Environments/Tools:} Linux, Git, Make, CMake, NumPy, Matplotlib, TensorFlow, ROS, OpenCV\cvonly{, Eigen, Docker}
 
-\resumeonly{\pagebreak}  % TODO this should be unnecessary
 \begin{multicols}{3}[\section{Relevant Cousework}\vspace*{-1.2\topsep}]
 \begin{itemize}
+	\item Robotics
 	\item Programming Languages
 	\item Computer Networks
 	\item Machine Learning
@@ -163,6 +167,7 @@
 	\item Computer Architecture
 	\item Software Engineering
 %	\cvonly{\item Game Design}
+	\item Graph Theory
 	\item Real Analysis
 	\item Ordinary Differential Equations
 	\item Number Theory
