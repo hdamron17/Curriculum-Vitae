@@ -1,8 +1,8 @@
-\documentclass[\ifdefined\cv11pt\else10pt\fi,letterpaper,roman]{moderncv}
+\documentclass[\ifdefined\cv11pt\else10pt\fi,letterpaper]{moderncv}
 
-\newcommand{\cvonly}[1]{\ifdefined\cv#1\fi}
-\newcommand{\resumeonly}[1]{\ifdefined\cv\else#1\fi}
-\newcommand{\deprecated}[1]{}
+\newcommand{\cvonly}[1]{\ifdefined\cv#1\fi\ignorespaces}
+\newcommand{\resumeonly}[1]{\ifdefined\cv\else#1\fi\ignorespaces}
+\newcommand{\deprecated}[1]{\ignorespaces}
 
 \usepackage[utf8]{inputenc}
 \usepackage[margin=\ifdefined\cv0.50in\else0.50in\fi]{geometry}
@@ -39,7 +39,8 @@
 %\address{4569 Edgeland Road}{}{Edgemoor, SC}
 \address{1230 Pendleton Street}{Apt. 10D}{Columbia, SC}
 \phone[mobile]{+1~(803)~448~4411}
-\email{hdamron@email.sc.edu}
+%\email{hdamron@email.sc.edu}
+\email{hdamron1594@yahoo.com}
 %\homepage{cse.sc.edu/~hdamron}
 \social[github]{github.com/hdamron17}
 %\extrainfo{Citizen of U.S.A.}
@@ -55,7 +56,7 @@
 \makecvtitle{}
 \vspace*{\ifdefined\cv-8ex\else-8ex\fi}
 \section{Education}
-\cventry{May 2021}{BS, Computer Science and Mathematics Double Major}{University of South Carolina Honors College}{Columbia, SC}{GPA: 3.972 Major GPA: 4.0}{}
+\cventry{May 2021}{BS, Computer Science and Mathematics Double Major}{\href{https://sc.edu/}{University of South Carolina (UofSC)} \href{https://www.sc.edu/study/colleges_schools/honors_college/}{Honors College (SCHC)}}{Columbia, SC}{GPA: 3.972 Major GPA: 4.0}{}
 % TODO Distinction in Mathematics
 % TODO Graduation with Leadership Distinction in Research
 \cvonly{\cventry{May 2017}{High School Diploma}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{GPA: 4.0}{}}
@@ -63,39 +64,40 @@
 % TODO Add reserach interests section
 
 \section{Experience}
-\cventry{May 2020--present}{Undergraduate Researcher under Laszlo Szekely}{Mathematics Department, UofSC}{Columbia, SC}{}{
+\cventry{May 2020--present}{Undergraduate Researcher under \href{http://people.math.sc.edu/laszlo/}{Laszlo Szekely}}{Mathematics Department, UofSC}{Columbia, SC}{}{
 \begin{itemize}
 	\item Enumerate domino tilings of a rectangle up to isomorphism.
 \end{itemize}}
-\cventry{November 2017--present}{Undergraduate Researcher under Ioannis Rekleitis}{Autonomous Field Robotics Laboratory, UofSC}{Columbia, SC}{}{
+\cventry{November 2017--present}{Undergraduate Researcher under \href{https://cse.sc.edu/~yiannisr/}{Ioannis Rekleitis}}{\href{https://afrl.cse.sc.edu/}{Autonomous Field Robotics Laboratory}, UofSC}{Columbia, SC}{}{
 \begin{itemize}
 	\item Develop and test methods for localization and path planning for underwater robots.
-	\item Peer reviewer for IROS 2020 conference.\hfill\textit{April 2020}
-	\item Presented \cite{damron2019} at UofSC Summer Research Symposium.\hfill\textit{August 2019}
-	\item Conducted field trials and participated in conference at Bellairs Research Institute, Barbados.\hfill\textit{January 2019}
-	\item Presented \cite{uwcl} at IROS 2018 conference in Madrid, Spain.\hfill\textit{October 2018}
-	\item Collaborated with Interactive Robotics and Vision Laboratory at University of Minnesota.\hfill\textit{August 2018}
+	\item Peer reviewer for \href{https://www.iros2020.org/}{IROS 2020} conference.\hfill\textit{April 2020}
+	\item Presented \cite{damron2019} at \href{https://www.sc.edu/about/offices_and_divisions/research/news_and_pubs/news/2019/20190626_Summer_Symposium.php}{UofSC Summer Research Symposium}.\hfill\textit{August 2019}
+	\item Conducted field trials and participated in conference at \href{https://www.mcgill.ca/bellairs/}{Bellairs Research Institute, Barbados}.\hfill\textit{January 2019}
+	\item Presented \cite{uwcl} at \href{https://www.iros2018.org/}{IROS 2018} conference in Madrid, Spain.\hfill\textit{October 2018}
+	\item Collaborated with \href{http://irvlab.cs.umn.edu/}{Interactive Robotics and Vision Laboratory at University of Minnesota}.\hfill\textit{August 2018}
 \end{itemize}}
 
-% TODO fill in details, ensure correct lab
-\cventry{May 2020--August 2020}{Robotics Institute Summer Scholar (RISS) under Christoph Mertz}{Argo AI Center for Autonomous Vehicle Research, Carnegie Mellon University}{Pittsburgh, PA}{}{
+\cventry{May 2020--August 2020}{\href{https://riss.ri.cmu.edu/}{Robotics Institute Summer Scholar (RISS)} under \href{https://www.ri.cmu.edu/ri-people/christoph-mertz/}{Christoph Mertz}}{\href{https://www.cs.cmu.edu/afs/cs/project/alv/www/index.html}{NavLab Group}, \href{https://www.cmu.edu/}{Carnegie Mellon University}}{Pittsburgh, PA}{}{
 \begin{itemize}
-	\item Employ public bus data to detect changes in HD maps for autonomous car navigation.
+	\item Developed methods for traffic detection and localization for updating HD maps used by self-driving cars.
+	\item Worked with communications team to deliver a \href{https://riss.ri.cmu.edu/meet-the-2020-ri-summer-scholars/}{scholar introduction booklet}, a \href{https://riss.ri.cmu.edu/riss-midsummer-update/}{midsummer update}, 
+	\item Presented \cite{riss2020} at \href{https://gophervr.org/}{University of Minnesota REU 2020 Poster Symposium}.\hfill\textit{August 2020}
 \end{itemize}
 }
 
-\cventry{July 2019--November 2019}{Undergraduate Researcher under Annie Bourbonnais}{Marine Stable Isotope Biogeochemistry Laboratory, UofSC}{Columbia, SC}{}{\begin{itemize}
+\cventry{July 2019--November 2019}{Undergraduate Researcher under \href{https://www.sc.edu/study/colleges_schools/artsandsciences/earth_ocean_and_environment/our_people/directory/bourbonnais_annie.php}{Annie Bourbonnais}}{\href{https://www.abourbonnais.com/}{Marine Stable Isotope Biogeochemistry Laboratory}, UofSC}{Columbia, SC}{}{\begin{itemize}
 	\item Set up and calibrated PAL autosampler for chemical oceanography research.
 	\item Wrote operation manual for PAL autosampler.
 \end{itemize}}
 
-\cventry{August 2018--December 2019}{Grader for MATH 574: Discrete Mathematics I -- 2 Semesters}{Mathematics Department, UofSC}{Columbia, SC}{}{}
+\cvonly{\cventry{August 2018--December 2019}{Grader for MATH 574: Discrete Mathematics I -- 2 Semesters}{Mathematics Department, UofSC}{Columbia, SC}{}{}}
 
 \cventry{August 2018--December 2018}{Introductory Computer Sciene Lab Teaching Assistant}{Computer Science Department, UofSC}{Columbia, SC}{}{}
 
-\cvonly{\cventry{June 2017--July 2017}{GoSciTech STEM Summer Camp Student Assistant}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{}{}}
+\cvonly{\cventry{June 2017--July 2017}{\href{https://www.scgssm.org/camps/goscitech}{GoSciTech STEM Summer Camp} Student Assistant}{\href{https://www.scgssm.org/}{South Carolina Governor's School for Science and Mathematics (SCGSSM)}}{Hartsville, SC}{}{}}
 
-\cventry{June 2016--July 2016}{Research Intern under Marco Hirsch}{German Research Center for Artificial Intelligence (DKFI)}{Kaiserslautern, Germany}{}{
+\cventry{June 2016--July 2016}{Research Intern under \href{https://www.dfki.de/en/web/about-us/employee/person/mahi04/}{Marco Hirsch}}{\href{https://www.dfki.de/en/web/}{German Research Center for Artificial Intelligence (DKFI)}}{Kaiserslautern, Germany}{}{
 \begin{itemize}
 	\item Designed non-linear method of administering questionnaires for improved efficiency.
 	\cvonly{\item Presented \cite{dfki2016} at 2017 SCGSSM Annual Research Colloquium.\hfill\textit{February 2017}}
@@ -110,86 +112,84 @@
 
 \section{\textbf{Honors and Awards}}
 \begin{itemize}
-	% TODO IROS 2020 reviewer
 	% TODO Magellan Scholar Award :(
-	% TODO SURF Grant (round 2)
-	\cvitem{Victor W. Laurie Undergraduate Research Scholarship}{April 2020}
-	\cvitem{DAAD RISE Germany Internship}{March 2020}  % TODO cancelled due to coronavirus
-	\cvitem{CRA Outstanding Undergraduate Researcher Honorable Mention}{December 2019}
-	\cvitem{ACM ICPC Division I College of Charleston 3\rd Place 2017, 2\nd Place 2018, 2\nd Place 2019}{November 2019}
-	\cvitem{McNAIR Junior Fellows Research Grant}{May 2019}
-	\cvitem{South Carolina Honors College Science Undergraduate Research Fellowship (SURF) Grant}{May 2019}
-	\cvitem{Phi Beta Kappa Freshman Award}{April 2019}
-	\cvitem{Magellan Voyager Travel Award}{October 2018}
-	\cvitem{South Carolina Honors College Scholarly Research Travel Support Award}{October 2018}
-	\cvitem{IROS Student and Developing Countries Travel Award}{October 2018}
-	\cvitem{\parbox[t]{0.75\linewidth}{ACM Code-A-Thon Division 2\nd Place Fall 2017, Division 1\st Place Spring 2018, Highest Division 2\nd Place Fall 2018}\vspace*{0.6ex}}{October 2018}
-	\cvitem{Carolina Scholar Award}{August 2017}
+	\cvitem{\href{https://www.sc.edu/study/colleges_schools/honors_college/internal/beyond_the_classroom/undergraduate_research/surf_and_exploration_grants/index.php}{SCHC Science Undergraduate Research Fellowship (SURF) Grant - 2 years}}{May 2019 \& August 2020}
+	\cvitem{\href{https://sc.edu/study/colleges_schools/artsandsciences/mathematics/study/awards_scholarships/}{Victor W. Laurie Undergraduate Research Scholarship}}{April 2020}
+	\cvitem{\href{https://www.daad.de/rise/en/rise-germany/}{DAAD RISE Germany Internship} (Cancelled)}{March 2020}
+	\cvitem{\href{https://cra.org/about/awards/outstanding-undergraduate-researcher-award/}{CRA Outstanding Undergraduate Researcher Honorable Mention}}{December 2019}
+	\cvonly{\cvitem{\href{http://compsci.cofc.edu/ACM-ICPC.php}{ACM ICPC Division I College of Charleston} 3\rd Place 2017, 2\nd Place 2018, 2\nd Place 2019}{November 2019}}
+	\cvitem{\href{https://sc.edu/about/offices_and_divisions/undergraduate_research/apply_for_funding/other_money_opportunities/cec_mcnair-research-fellows-summer/index.php}{McNAIR Junior Fellows Research Grant}}{May 2019}
+	\cvitem{\href{https://www.sc.edu/uofsc/announcements/posts/2019/04/university_awards_day_2019.php}{Phi Beta Kappa Freshman Award}}{April 2019}
+	\cvitem{\href{https://www.sc.edu/about/offices_and_divisions/undergraduate_research/apply_for_funding/our_funding/conference-travel/index.php}{Magellan Voyager Travel Award}}{October 2018}
+	\cvitem{\href{https://www.sc.edu/study/colleges_schools/honors_college/experience/undergraduate_research/index.php}{SCHC Scholarly Research Presentation Travel Support Award}}{October 2018}
+	\cvitem{\href{https://www.iros2018.org/travel-grants}{IROS Student and Developing Countries Travel Award}}{October 2018}
+	\cvonly{\cvitem{\parbox[t]{0.75\linewidth}{ACM Code-A-Thon Division 2\nd Place Fall 2017, Division 1\st Place Spring 2018, Highest Division 2\nd Place Fall 2018}\vspace*{0.6ex}}{October 2018}}
+	\cvitem{\href{https://sc.edu/about/offices_and_divisions/undergraduate_admissions/honors_and_scholars_programs/top_scholars/}{Carolina Scholar Award}}{August 2017}
 	\cvonly{\cvitem{Senior Computer Science Award}{May 2017}}
-	\cvitem{Eagle Scout Rank}{November 2016}
+	\cvitem{\href{https://en.wikipedia.org/wiki/Eagle_Scout_\%28Boy_Scouts_of_America\%29}{Eagle Scout Rank}}{November 2016}
 	\cvonly{\cvitem{University of Rochester Bausch and Lomb Honorary Science Award}{May 2016}}
-	\cvitem{Research Experience Scholars Program Travel Award}{April 2016}
+	\cvonly{\cvitem{\href{https://www.scgssm.org/residential/academics/senior-research}{Research Experience Scholars Program Travel Award}}{April 2016}}
 \end{itemize}
 
 %\cvonly\newpage
 \section{\textbf{Organizations}}
 \begin{itemize}
-	\cvitem{Association of Computing Machinery (Chapter President, June 2019--present)}{November 2017--present}
-	\cvitem{Gamecock Sailing Team (Keelboat Vice Chair, January 2019--present)}{January 2018--present}
-	\cvitem{Phi Beta Kappa Honor Society}{March 2020--present}  % TODO verify induction date
-	\cvitem{Open Source South Carolina Meetup Group}{March 2019--present}
-	\cvitem{Tau Beta Pi Engineering Honor Society Society}{November 2018--present}
-	\cvitem{Pi Mu Epsilon Mathematics Honor Society}{September 2018--present}
-	\cvitem{Institute of Electrical and Electronics Engineers}{July 2018--present}
+	\cvitem{\href{https://www.acm.org/}{Association of Computing Machinery} (\href{https://acm.cse.sc.edu/}{Chapter} President, June 2019--June 2020)}{November 2017--present}
+	\cvitem{\href{https://www.gamecocksailing.com/}{Gamecock Sailing Team} (Keelboat Vice Chair, January 2019--present)}{January 2018--present}
+	\cvitem{\href{https://www.pbk.org/}{Phi Beta Kappa Honor Society}}{April 2020--present}
+	\cvitem{\href{https://www.meetup.com/Open-Source-South-Carolina/}{Open Source South Carolina Meetup Group}}{March 2019--present}
+	\cvitem{\href{https://tbp.org/}{Tau Beta Pi Engineering Honor Society Society}}{November 2018--present}
+	\cvitem{\href{https://pme-math.org/}{Pi Mu Epsilon Mathematics Honor Society}}{September 2018--present}
+	\cvitem{\href{https://www.ieee.org/}{Institute of Electrical and Electronics Engineers}}{July 2018--present}
 	\cvonly{
 		\cvitem{FTC Robotics Team 327 (Captain and Programming Captain, 2017)}{October 2015--April 2017}
 		\cvitem{Microgravity Research Club}{April 2016--March 2017}
 	}
 \end{itemize}
 
-\resumeonly{\pagebreak}
-\setlength{\premulticols}{0pt}
+\resumeonly{\enlargethispage{2\baselineskip}}
 \section{Skills}
-\textit{Programming Languages:} (proficient) Python, C/C++, Java, Bash, \LaTeX; (familiar) Haskell, MATLAB \par
-\textit{Environments/Tools:} Linux, Git, Make, CMake, NumPy, Matplotlib, TensorFlow, ROS, OpenCV\cvonly{, Eigen, Docker}
+\textit{Programming Languages:} (proficient) Python, C/C++, Rust, Java, Bash, \LaTeX; (familiar) Haskell, MATLAB \par
+\textit{Environments/Tools:} Linux, Git, Make, CMake, NumPy, Matplotlib, TensorFlow, ROS, OpenCV, Eigen, Docker \par
+\textit{Graduate Coursework in Progress:} Discrete Mathematics I, Analysis of Algorithms
 
-\begin{multicols}{3}[\section{Relevant Cousework}\vspace*{-1.2\topsep}]
-\begin{itemize}
-	\item Robotics
-	\item Programming Languages
-	\item Computer Networks
-	\item Machine Learning
-	\item Theory of Computation
-	\item Compiler Design
-	\item Data Structures and Algorithms
-	\item Operating Systems
-	\item Image Processing
-	\item Computer Architecture
-	\item Software Engineering
-%	\cvonly{\item Game Design}
-	\item Graph Theory
-	\item Real Analysis
-	\item Ordinary Differential Equations
-	\item Number Theory
-	\item Mathematical Formal Logic
-	\item Algebraic Structures
-	\item Linear Algebra
-	\item Discrete Mathematics
-	\cvonly{
-		\item Mathematical Linguistics
-		\item Multi-Variable Calculus
-		\item Engineering Statistics
-		\item Computational Physics
-%		\item Introduction to Proofs
-	}
-\end{itemize}
-\end{multicols}
-\vspace{-2.8ex}
+%\begin{multicols}{3}[\section{Relevant Cousework}\vspace*{-1.2\topsep}]
+%\begin{itemize}
+%	\item Robotics
+%	\item Programming Languages
+%	\item Computer Networks
+%	\item Machine Learning
+%	\item Theory of Computation
+%	\item Compiler Design
+%	\item Data Structures and Algorithms
+%	\item Operating Systems
+%	\item Image Processing
+%	\item Computer Architecture
+%	\item Software Engineering
+%%	\cvonly{\item Game Design}
+%	\item Graph Theory
+%	\item Real Analysis
+%	\item Ordinary Differential Equations
+%	\item Number Theory
+%	\item Mathematical Formal Logic
+%	\item Algebraic Structures
+%	\item Linear Algebra
+%	\item Discrete Mathematics
+%	\cvonly{
+%		\item Mathematical Linguistics
+%		\item Multi-Variable Calculus
+%		\item Engineering Statistics
+%		\item Computational Physics
+%%		\item Introduction to Proofs
+%	}
+%\end{itemize}
+%\end{multicols}
+%\vspace{-2.8ex}
 
 \section{Additional Training}
 \begin{itemize}
 	\cvitem{
-		\parbox[t]{0.85\linewidth}{Collaborative Institutional Training Initiative (CITI) Responsible Conduct of Research for Engineers}}{May 2019}
+		\parbox[t]{0.85\linewidth}{\href{https://about.citiprogram.org/en/series/responsible-conduct-of-research-rcr/}{Collaborative Institutional Training Initiative (CITI) Responsible Conduct of Research for Engineers}}}{May 2019}
 \end{itemize}
 
 % IDEA: Competitions Section
