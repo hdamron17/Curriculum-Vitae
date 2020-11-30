@@ -5,9 +5,9 @@
 \newcommand{\deprecated}[1]{\ignorespaces}
 
 \usepackage[utf8]{inputenc}
-\usepackage[margin=\ifdefined\cv0.50in\else0.50in\fi]{geometry}
+\usepackage[margin=\ifdefined\cv0.5in\else0.7in\fi]{geometry}
 \usepackage{todonotes}
-\usepackage[backend=biber,style=ieee,sorting=ydnt]{biblatex}
+\usepackage[backend=biber,style=ieee,sorting=none]{biblatex}
 \usepackage{bibentry}
 \usepackage{multicol}
 \usepackage{xspace}
@@ -35,6 +35,8 @@
 \newcommand{\nd}{\textsuperscript{nd}\xspace}
 \newcommand{\rd}{\textsuperscript{rd}\xspace}
 
+\newcommand{\UofSC}{U\hspace{1pt}{of}\,SC}
+
 \name{\Large Hunter}{Damron}
 %\address{4569 Edgeland Road}{}{Edgemoor, SC}
 \address{1230 Pendleton Street}{Apt. 10D}{Columbia, SC}
@@ -52,34 +54,45 @@
 
 \renewcommand\labelitemi{\raisebox{0.15ex}{$\circ$\hspace{-0.25em}}}
 
+\DeclareBibliographyCategory{refereed}
+\DeclareBibliographyCategory{preprint}
+\DeclareBibliographyCategory{presentation}
+\addtocategory{refereed}{uwcl,marios_trajopt,joshi_deepurl}
+\addtocategory{preprint}{riss2020}
+\addtocategory{presentation}{damron2019}
+% For the ordering
+\nocite{uwcl,marios_trajopt,joshi_deepurl}
+\nocite{riss2020}
+\nocite{damron2019}
+
 \begin{document}
 \makecvtitle{}
 \vspace*{\ifdefined\cv-8ex\else-8ex\fi}
 \section{Education}
-\cventry{May 2021}{BS, Computer Science and Mathematics Double Major}{\href{https://sc.edu/}{University of South Carolina (UofSC)} \href{https://www.sc.edu/study/colleges_schools/honors_college/}{Honors College (SCHC)}}{Columbia, SC}{GPA: 3.972 Major GPA: 4.0}{%
+\cventry{May 2021}{BS, Computer Science and Mathematics Double Major}{\href{https://sc.edu/}{University of South Carolina (\UofSC)} \href{https://www.sc.edu/study/colleges_schools/honors_college/}{Honors College (SCHC)}}{Columbia, SC}{GPA: 3.972 Major GPA: 4.0}{%
 \begin{itemize}
 	\item Graduation with Distinction in Mathematics
-%	\item Graduation with Leadership Distinction in Research
+	\item Graduation with Leadership Distinction in Research
 \end{itemize}}
 \cvonly{\cventry{May 2017}{High School Diploma}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{GPA: 4.0}{}}
 
 % TODO Add reserach interests section
 
-\section{Experience}
-\cventry{August 2020--present}{Capstone Computing Project (Team of 4) under \href{https://cse.sc.edu/~yiannisr/}{Dr.\ Ioannis Rekleitis} and \href{https://people.math.sc.edu/cooper/}{Dr.\ Joshua Cooper}}{Computer Science Department, UofSC}{Columbia, SC}{}{
+\section{Research Experience}
+\cventry{August 2020--present}{Capstone Project (Team of 4) under \href{https://cse.sc.edu/~yiannisr/}{Dr.\ Ioannis Rekleitis} and \href{https://people.math.sc.edu/cooper/}{Dr.\ Joshua Cooper}}{Computer Science Department, \UofSC}{Columbia, SC}{}{
 \begin{itemize}
-	\item Develop robot path planning algorithm for efficient coverage of a lakebed when sensor width varies with depth.
+	\item Developed robot path planning algorithm for efficient coverage of a lakebed when sensor width varies with depth.
 \end{itemize}}
-\cventry{May 2020--present}{Undergraduate Researcher under \href{http://people.math.sc.edu/laszlo/}{Dr.\ Laszlo Szekely}}{Mathematics Department, UofSC}{Columbia, SC}{}{
+\cventry{May 2020--present}{Undergraduate Researcher under \href{http://people.math.sc.edu/laszlo/}{Dr.\ Laszlo Szekely}}{Mathematics Department, \UofSC}{Columbia, SC}{}{
 \begin{itemize}
-	\item Enumerate domino tilings of a rectangle up to isomorphism.
+	\item Enumerated domino tilings of a rectangle up to isomorphism.
 \end{itemize}}
-\cventry{November 2017--present}{Undergraduate Researcher under \href{https://cse.sc.edu/~yiannisr/}{Dr.\ Ioannis Rekleitis}}{\href{https://afrl.cse.sc.edu/}{Autonomous Field Robotics Laboratory}, UofSC}{Columbia, SC}{}{
+\cventry{November 2017--present}{Undergraduate Researcher under \href{https://cse.sc.edu/~yiannisr/}{Dr.\ Ioannis Rekleitis}}{\href{https://afrl.cse.sc.edu/}{Autonomous Field Robotics Laboratory}, \UofSC}{Columbia, SC}{}{
 \begin{itemize}
-	\item Develop and test methods for localization and path planning for underwater robots.
+	\item Developed and tested methods for localization and path planning for underwater robots.
 	\item Collaborated with other lab members on \cite{joshi_deepurl} and \cite{marios_trajopt}.
-	\item Peer reviewer for \href{https://www.iros2020.org/}{2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}.\hfill\textit{April 2020}
-	\item Presented \cite{damron2019} as first author at the \href{https://www.sc.edu/about/offices_and_divisions/research/news_and_pubs/news/2019/20190626_Summer_Symposium.php}{UofSC Summer Research Symposium}.\hfill\textit{August 2019}
+	\item Submitted peer review for \href{https://www.iros2020.org/}{IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}.\hfill\textit{April 2020}
+	\item Presented \cite{damron2019} as first author at the \href{https://www.sc.edu/about/offices_and_divisions/research/news_and_pubs/news/2019/20190626_Summer_Symposium.php}{\UofSC Summer Research Symposium}.\hfill\textit{August 2019}
 	\item Conducted field trials and participated in conference at \href{https://www.mcgill.ca/bellairs/}{Bellairs Research Institute, Barbados}.\hfill\textit{January 2019}
 	\item Presented \cite{uwcl} as first author at \href{https://www.iros2018.org/}{IROS 2018} conference in Madrid, Spain.\hfill\textit{October 2018}
 	% \item Collaborated with \href{http://irvlab.cs.umn.edu/}{Interactive Robotics and Vision Laboratory at University of Minnesota}.\hfill\textit{August 2018}
@@ -88,19 +101,15 @@
 \cventry{May 2020--August 2020}{\href{https://riss.ri.cmu.edu/}{Robotics Institute Summer Scholar (RISS)} under \href{https://www.ri.cmu.edu/ri-people/christoph-mertz/}{Dr.\ Christoph Mertz}}{\href{https://www.cs.cmu.edu/afs/cs/project/alv/www/index.html}{NavLab Group}, \href{https://www.cmu.edu/}{Carnegie Mellon University}}{Pittsburgh, PA}{}{
 \begin{itemize}
 	\item Developed methods for traffic detection and localization for updating high definition maps used by self-driving cars.
-	\item Worked with communications team to deliver a \href{https://riss.ri.cmu.edu/meet-the-2020-ri-summer-scholars/}{scholar introduction booklet}, a \href{https://riss.ri.cmu.edu/riss-midsummer-update/}{midsummer update}, \href{https://www.youtube.com/channel/UC0iLihY7u36PRFrmydG5J7A}{weekly videos}, and a journal.
+	\item Led communications team to deliver a \href{https://riss.ri.cmu.edu/meet-the-2020-ri-summer-scholars/}{scholar introduction booklet}, a \href{https://riss.ri.cmu.edu/riss-midsummer-update/}{midsummer update}, \href{https://www.youtube.com/channel/UC0iLihY7u36PRFrmydG5J7A}{weekly videos}, and a journal.
 	\item Presented \cite{riss2020} at the \href{https://gophervr.org/}{University of Minnesota REU 2020 Poster Symposium}.\hfill\textit{August 2020}
 \end{itemize}
 }
 
-\cventry{July 2019--November 2019}{Undergraduate Researcher under \href{https://www.sc.edu/study/colleges_schools/artsandsciences/earth_ocean_and_environment/our_people/directory/bourbonnais_annie.php}{Dr.\ Annie Bourbonnais}}{\href{https://www.abourbonnais.com/}{Marine Stable Isotope Biogeochemistry Laboratory}, UofSC}{Columbia, SC}{}{\begin{itemize}
+\cventry{July 2019--November 2019}{Undergraduate Researcher under \href{https://www.sc.edu/study/colleges_schools/artsandsciences/earth_ocean_and_environment/our_people/directory/bourbonnais_annie.php}{Dr.\ Annie Bourbonnais}}{\href{https://www.abourbonnais.com/}{Marine Stable Isotope Biogeochemistry Laboratory}, \UofSC}{Columbia, SC}{}{\begin{itemize}
 	\item Set up and calibrated autosampler equipment for chemical oceanography research.
 	\item Wrote operation manual for autosampler.
 \end{itemize}}
-
-\cvonly{\cventry{August 2018--December 2019}{Grader for MATH 574: Discrete Mathematics I -- 2 Semesters}{Mathematics Department, UofSC}{Columbia, SC}{}{}}
-
-\cventry{August 2018--December 2018}{Introductory Computer Science Lab Teaching Assistant}{Computer Science Department, UofSC}{Columbia, SC}{}{}
 
 \cvonly{\cventry{June 2017--July 2017}{\href{https://www.scgssm.org/camps/goscitech}{GoSciTech STEM Summer Camp} Student Assistant}{\href{https://www.scgssm.org/}{South Carolina Governor's School for Science and Mathematics (SCGSSM)}}{Hartsville, SC}{}{}}
 
@@ -117,19 +126,30 @@
 
 %\cvonly{\cventry{August 2016--May 2017}{Volunteer Physics and Computer Science Tutor}{South Carolina Governor's School for Science and Mathematics}{Hartsville, SC}{}{}}
 
-\section{\textbf{Honors and Awards}}
+\section{Relevant Experience}
+\cventry{June 2019--June 2020}{Student Chapter President}{\href{https://acm.cse.sc.edu/}{Association of Computing Machinery}, \UofSC}{Columbia, SC}{}{}
+
+\cventry{August 2018--December 2019}{Grader for Discrete Mathematics I}{Mathematics Department, \UofSC}{Columbia, SC}{}{}
+
+\cventry{August 2018--December 2018}{Introductory Computer Science Lab Teaching Assistant}{Computer Science Department, \UofSC}{Columbia, SC}{}{}
+
+\section{Honors and Awards}
 \begin{itemize}
 	% TODO Magellan Scholar Award :(
-	\cvitem{\href{https://www.sc.edu/study/colleges_schools/honors_college/internal/beyond_the_classroom/undergraduate_research/surf_and_exploration_grants/index.php}{SCHC Science Undergraduate Research Fellowship (SURF) Grant - 2 years}}{May 2019 \& August 2020}
+	\cvitem{\href{https://www.sc.edu/study/colleges_schools/honors_college/internal/beyond_the_classroom/undergraduate_research/surf_and_exploration_grants/index.php}{SCHC Science Undergraduate Research Fellowship (SURF) Grant}}{May 2019 \& August 2020}
+	\cvitem{\href{https://www.pbk.org/}{Phi Beta Kappa Honor Society}}{April 2020}
 	\cvitem{\href{https://sc.edu/study/colleges_schools/artsandsciences/mathematics/study/awards_scholarships/}{Victor W. Laurie Undergraduate Research Scholarship}}{April 2020}
 	\cvitem{\href{https://www.daad.de/rise/en/rise-germany/}{DAAD RISE Germany Internship} (Cancelled due to COVID-19 Pandemic)}{March 2020}
 	\cvitem{\href{https://cra.org/about/awards/outstanding-undergraduate-researcher-award/}{Computing Research Association Outstanding Undergraduate Researcher -- Honorable Mention}}{December 2019}  % 136 awarded
 	\cvonly{\cvitem{\href{http://compsci.cofc.edu/ACM-ICPC.php}{ACM ICPC Division I College of Charleston} 3\rd Place 2017, 2\nd Place 2018, 2\nd Place 2019}{November 2019}}
 	\cvitem{\href{https://sc.edu/about/offices_and_divisions/undergraduate_research/apply_for_funding/other_money_opportunities/cec_mcnair-research-fellows-summer/index.php}{McNAIR Junior Fellows Research Grant}}{May 2019}  % 22 awarded in CEC
 	\cvitem{\href{https://www.sc.edu/uofsc/announcements/posts/2019/04/university_awards_day_2019.php}{Phi Beta Kappa Freshman Award}}{April 2019}
+	\cvitem{\href{https://tbp.org/}{Tau Beta Pi Engineering Honor Society}}{November 2018}
+	\cvonly{
 	\cvitem{\href{https://www.sc.edu/about/offices_and_divisions/undergraduate_research/apply_for_funding/our_funding/conference-travel/index.php}{Magellan Voyager Travel Award}}{October 2018}
 	\cvitem{\href{https://www.sc.edu/study/colleges_schools/honors_college/experience/undergraduate_research/index.php}{SCHC Scholarly Research Presentation Travel Support Award}}{October 2018}
 	\cvitem{\href{https://www.iros2018.org/travel-grants}{IROS Student and Developing Countries Travel Award}}{October 2018}
+	}
 	\cvonly{\cvitem{\parbox[t]{0.75\linewidth}{ACM Code-A-Thon Division 2\nd Place Fall 2017, Division 1\st Place Spring 2018, Highest Division 2\nd Place Fall 2018}\vspace*{0.6ex}}{October 2018}}
 	\cvitem{\href{https://sc.edu/about/offices_and_divisions/undergraduate_admissions/honors_and_scholars_programs/top_scholars/}{Carolina Scholar Award}}{August 2017}
 	\cvonly{\cvitem{Senior Computer Science Award}{May 2017}}
@@ -139,20 +159,19 @@
 \end{itemize}
 
 %\cvonly\newpage
-\section{\textbf{Organizations}}
-\begin{itemize}
-	\cvitem{\href{https://www.acm.org/}{Association of Computing Machinery} (\href{https://acm.cse.sc.edu/}{Chapter} President, June 2019--June 2020)}{November 2017--present}
-	\cvitem{\href{https://www.gamecocksailing.com/}{Gamecock Sailing Team} (Keelboat Vice Chair, January 2019--August 2020)}{January 2018--present}
-	\cvitem{\href{https://www.pbk.org/}{Phi Beta Kappa Honor Society}}{April 2020--present}
-	\cvitem{\href{https://www.meetup.com/Open-Source-South-Carolina/}{Open Source South Carolina Meetup Group}}{March 2019--present}
-	\cvitem{\href{https://tbp.org/}{Tau Beta Pi Engineering Honor Society}}{November 2018--present}
-	\cvitem{\href{https://pme-math.org/}{Pi Mu Epsilon Mathematics Honor Society}}{September 2018--present}
-	\cvitem{\href{https://www.ieee.org/}{Institute of Electrical and Electronics Engineers}}{July 2018--present}
-	\cvonly{
-		\cvitem{FTC Robotics Team 327 (Captain and Programming Captain, 2017)}{October 2015--April 2017}
-		\cvitem{Microgravity Research Club}{April 2016--March 2017}
-	}
-\end{itemize}
+%\section{\textbf{Organizations}}
+%\begin{itemize}
+%	\cvitem{\href{https://www.acm.org/}{Association of Computing Machinery} (\href{https://acm.cse.sc.edu/}{Chapter} President, June 2019--June 2020)}{November 2017--present}
+%	\cvitem{\href{https://www.pbk.org/}{Phi Beta Kappa Honor Society}}{April 2020--present}
+%	\cvitem{\href{https://www.meetup.com/Open-Source-South-Carolina/}{Open Source South Carolina Meetup Group}}{March 2019--present}
+%	\cvitem{\href{https://tbp.org/}{Tau Beta Pi Engineering Honor Society}}{November 2018--present}
+%	\cvitem{\href{https://pme-math.org/}{Pi Mu Epsilon Mathematics Honor Society}}{September 2018--present}
+%	\cvitem{\href{https://www.ieee.org/}{Institute of Electrical and Electronics Engineers}}{July 2018--present}
+%	\cvonly{
+%		\cvitem{FTC Robotics Team 327 (Captain and Programming Captain, 2017)}{October 2015--April 2017}
+%		\cvitem{Microgravity Research Club}{April 2016--March 2017}
+%	}
+%\end{itemize}
 
 \section{Skills}
 \textit{Programming Languages:} (proficient) Python, C/C++, Rust, Java, Bash, \LaTeX; (familiar) Haskell, MATLAB \par
@@ -192,11 +211,11 @@
 %\end{multicols}
 %\vspace{-2.8ex}
 
-\section{Additional Training}
-\begin{itemize}
-	\cvitem{
-		\parbox[t]{0.85\linewidth}{\href{https://about.citiprogram.org/en/series/responsible-conduct-of-research-rcr/}{Collaborative Institutional Training Initiative (CITI) Responsible Conduct of Research for Engineers}}}{May 2019}
-\end{itemize}
+%\section{Additional Training}
+%\begin{itemize}
+%	\cvitem{
+%		\parbox[t]{0.85\linewidth}{\href{https://about.citiprogram.org/en/series/responsible-conduct-of-research-rcr/}{Collaborative Institutional Training Initiative (CITI) Responsible Conduct of Research for Engineers}}}{May 2019}
+%\end{itemize}
 
 % IDEA: Competitions Section
 % - ACM Code-A-Thons (and awards)
@@ -204,6 +223,11 @@
 % - Colahacks (April 2018)
 
 \section{Publications and Presentations}
-	\nocite{*}
-	\printbibliography[heading=none]{}
+	\vspace{1ex}
+	\subsection{Fully Refereed Conference Proceedings}
+	\printbibliography[heading=none,category=refereed]{}
+	\subsection{Preprint Articles}
+	\printbibliography[heading=none,category=preprint]{}
+	\subsection{Presentations}
+	\printbibliography[heading=none,category=presentation]{}
 \end{document}
