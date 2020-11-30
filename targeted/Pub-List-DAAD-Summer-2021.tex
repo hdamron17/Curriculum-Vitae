@@ -1,0 +1,38 @@
+\documentclass{article}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=0.65in]{geometry}
+\usepackage[backend=biber,style=ieee]{biblatex}
+
+\bibliography{../Publications}
+
+\title{\Large DAAD Short-Term Research Proposal -- Publication List}
+\author{Hunter Damron}
+\date{}
+
+\DeclareBibliographyCategory{refereed}
+\DeclareBibliographyCategory{preprint}
+\DeclareBibliographyCategory{presentation}
+\addtocategory{refereed}{uwcl,marios_trajopt,joshi_deepurl}
+\addtocategory{preprint}{riss2020}
+\addtocategory{presentation}{damron2019}
+
+\pagenumbering{gobble}
+
+\begin{document}
+	\begin{center}
+		\large
+		DAAD Short-Term Research Proposal -- List of Publications \\[4pt]
+		\normalsize
+		Hunter Damron \\
+	\end{center}
+	\subsection*{Fully Refereed Conferences}
+	\nocite{uwcl,marios_trajopt,joshi_deepurl}
+	\printbibliography[heading=none,category=refereed]{}
+	\subsection*{Preprint Articles}
+	\nocite{riss2020}
+	\printbibliography[heading=none,category=preprint]{}
+	\subsection*{Presentations}
+	\nocite{damron2019}
+	\printbibliography[heading=none,category=presentation]{}
+\end{document}
